@@ -93,15 +93,8 @@
 
   .work {
     padding: 0 $desktopPad;
-    padding-top: 1.8rem;
+    padding-top: 1rem;
 
-    h1 {
-      text-transform: uppercase;
-      font-size: 3.5rem;
-      margin: auto;
-      color: $white;
-      margin-bottom: 5%;
-    }
     .card__container {
       display: flex;
       flex-direction: row;
@@ -181,6 +174,63 @@
           z-index: 10;
         }
       }
+    }
+  }
+
+  .contact__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $desktopPad;
+    padding-top: 1rem;
+
+    .contact {
+      padding: 0;
+      padding-right: 10%;
+      width: 50%;
+      border-right: 1px solid $white;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        input {
+          margin-bottom: 3rem;
+          color: $white;
+        }
+        button {
+          border: none;
+          margin: auto;
+          margin-bottom: 1rem;
+          color: #fff;
+          width: 100%;
+          height: 3rem;
+          border-radius: 3rem;
+          font-weight: 700;
+          background: $primary;
+        }
+      }
+      .social-media {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        .icon {
+          font-size: 1.1rem;
+          background: $icon;
+          border-radius: 50%;
+          width: 2.2rem;
+          height: 2.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 1rem;
+        }
+      }
+    }
+    img {
+      display: block;
+      width: 50%;
+      padding-left: 3%;
     }
   }
 }

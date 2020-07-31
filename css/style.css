@@ -22,13 +22,23 @@ body {
 }
 
 a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+a:active, a:focus {
   text-decoration: none;
   color: #fff;
 }
 
-a:active, a:focus, a:hover {
+a:hover {
+  color: #8e44ad;
   text-decoration: none;
-  color: #fff;
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 header {
@@ -207,6 +217,15 @@ header nav ul li {
   height: 2.2rem;
   border-radius: 2.2rem;
   font-weight: 700;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.buttons button:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
 }
 
 .buttons button:first-child {
@@ -226,14 +245,6 @@ header nav ul li {
 .work {
   padding: 0 32px;
   padding-top: 1.8rem;
-}
-
-.work h1 {
-  text-transform: uppercase;
-  font-size: 2.6rem;
-  margin: auto;
-  color: #fff;
-  margin-bottom: 2.7rem;
 }
 
 .work .card__container {
@@ -256,10 +267,14 @@ header nav ul li {
   height: 45vw;
   overflow: hidden;
   position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.work .card__container .card:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .work .card__container .card input {
@@ -270,6 +285,7 @@ header nav ul li {
   top: 0;
   left: 0;
   z-index: 11;
+  cursor: pointer;
 }
 
 .work .card__container .card .card__active {
@@ -342,12 +358,7 @@ header nav ul li {
   z-index: 10;
 }
 
-.contact {
-  padding: 0 32px;
-  padding-top: 1.8rem;
-}
-
-.contact h1 {
+h1 {
   text-transform: uppercase;
   font-size: 2.6rem;
   margin: auto;
@@ -355,7 +366,12 @@ header nav ul li {
   margin-bottom: 2.7rem;
 }
 
-.contact form {
+.contact__container .contact {
+  padding: 0 32px;
+  padding-top: 1.8rem;
+}
+
+.contact__container .contact form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,7 +382,7 @@ header nav ul li {
   margin-bottom: 3rem;
 }
 
-.contact form input {
+.contact__container .contact form input {
   background: none;
   border: none;
   border-bottom: 1px solid #999999;
@@ -374,7 +390,7 @@ header nav ul li {
   color: #ffffff;
 }
 
-.contact form button {
+.contact__container .contact form button {
   border: none;
   margin: auto;
   margin-bottom: 0;
@@ -384,9 +400,18 @@ header nav ul li {
   border-radius: 2.3rem;
   font-weight: 700;
   background: #8e44ad;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.contact .social-media {
+.contact__container .contact form button:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.contact__container .contact .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,7 +421,7 @@ header nav ul li {
   margin-bottom: 5rem;
 }
 
-.contact .social-media .icon {
+.contact__container .contact .social-media .icon {
   font-size: 0.9rem;
   background: #ffffff;
   border-radius: 50%;
@@ -412,6 +437,18 @@ header nav ul li {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0.6rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.contact__container .contact .social-media .icon:hover {
+  background: #8e44ad;
+  color: #ffffff;
+}
+
+.contact__container img {
+  display: none;
 }
 
 ::-webkit-input-placeholder {
@@ -538,14 +575,7 @@ header nav ul li {
   }
   .work {
     padding: 0 50px;
-    padding-top: 1.8rem;
-  }
-  .work h1 {
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    margin: auto;
-    color: #ffffff;
-    margin-bottom: 5%;
+    padding-top: 1rem;
   }
   .work .card__container {
     display: -webkit-box;
@@ -641,6 +671,81 @@ header nav ul li {
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     z-index: 10;
+  }
+  .contact__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 50px;
+    padding-top: 1rem;
+  }
+  .contact__container .contact {
+    padding: 0;
+    padding-right: 10%;
+    width: 50%;
+    border-right: 1px solid #ffffff;
+  }
+  .contact__container .contact form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .contact__container .contact form input {
+    margin-bottom: 3rem;
+    color: #ffffff;
+  }
+  .contact__container .contact form button {
+    border: none;
+    margin: auto;
+    margin-bottom: 1rem;
+    color: #fff;
+    width: 100%;
+    height: 3rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    background: #8e44ad;
+  }
+  .contact__container .contact .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0;
+  }
+  .contact__container .contact .social-media .icon {
+    font-size: 1.1rem;
+    background: #ffffff;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 1rem;
+  }
+  .contact__container img {
+    display: block;
+    width: 50%;
+    padding-left: 3%;
   }
 }
 /*# sourceMappingURL=style.css.map */
