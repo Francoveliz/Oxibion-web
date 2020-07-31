@@ -182,7 +182,9 @@ header nav ul li {
 }
 
 .home__container > img {
-  display: none;
+  width: 70%;
+  padding: 0 32px;
+  margin: auto;
 }
 
 .home {
@@ -543,7 +545,8 @@ h1 {
   .home__container > img {
     display: block;
     width: 45%;
-    padding-left: 10%;
+    padding: 0;
+    padding-right: 10%;
   }
   .buttons {
     font-size: 0.9rem;

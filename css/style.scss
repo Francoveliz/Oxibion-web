@@ -146,7 +146,9 @@ header {
 }
 .home__container {
   & > img {
-    display: none;
+    width: 70%;
+    padding: 0 $mobilePad;
+    margin: auto;
   }
 }
 .home {
