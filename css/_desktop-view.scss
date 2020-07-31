@@ -162,6 +162,16 @@
               border-radius: 2rem;
               font-weight: 700;
               background: $primary;
+              &:hover {
+                color: $white;
+              }
+
+              a {
+                color: $white;
+                &:hover {
+                  color: $white !important;
+                }
+              }
             }
           }
         }

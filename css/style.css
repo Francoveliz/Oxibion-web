@@ -348,6 +348,14 @@ header nav ul li {
   background: #8e44ad;
 }
 
+.work .card__container .card .card__active .card__content button a {
+  color: #ffffff;
+}
+
+.work .card__container .card .card__active .card__content button a:hover {
+  color: #ffffff;
+}
+
 .work .card__container .card img {
   position: absolute;
   top: 50%;
@@ -663,6 +671,15 @@ h1 {
     border-radius: 2rem;
     font-weight: 700;
     background: #8e44ad;
+  }
+  .work .card__container .card .card__active .card__content button:hover {
+    color: #ffffff;
+  }
+  .work .card__container .card .card__active .card__content button a {
+    color: #ffffff;
+  }
+  .work .card__container .card .card__active .card__content button a:hover {
+    color: #ffffff !important;
   }
   .work .card__container .card img {
     position: absolute;
